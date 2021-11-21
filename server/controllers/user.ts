@@ -97,6 +97,7 @@ const login = async (req: Request, res: Response) => {
     res
       .cookie('token', token, {
         httpOnly: true,
+        sameSite: 'none',
       })
       .status(200)
       .json({ userId: existingUser._id });
@@ -111,6 +112,7 @@ const logout = (req: Request, res: Response) => {
     .cookie('token', '', {
       httpOnly: true,
       expires: new Date(0),
+      sameSite: 'none',
     })
     .send();
 };
