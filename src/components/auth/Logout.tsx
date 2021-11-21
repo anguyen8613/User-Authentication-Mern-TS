@@ -1,10 +1,12 @@
 import axios from 'axios';
 import { FC, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { host } from '../../commons/host';
 import AuthContext from '../../context/AuthContext';
 
 const Logout: FC = () => {
   const navigate = useNavigate();
+  const server: string = process.env.REACT_APP_HOST || 'http://localhost:5000';
   const context = useContext(AuthContext);
   if (!context) {
     return null;
@@ -14,7 +16,7 @@ const Logout: FC = () => {
 
   const logoutUser = async () => {
     try {
-      await axios.get('http://localhost:5000/user/logout');
+      await axios.get(`${server}/user/logout`);
       await getLoggedIn();
       navigate('/');
     } catch (err) {

@@ -1,8 +1,7 @@
-import { host } from '../commons/host';
 import { User } from '../interfaces/user';
 
 export const registerUser = async (user: User) => {
-  const server: string = host;
+  const server: string = process.env.REACT_APP_HOST || 'http://localhost:5000';
   try {
     const response = await fetch(`${server}/user/register`, {
       method: 'POST',
