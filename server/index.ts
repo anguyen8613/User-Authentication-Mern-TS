@@ -18,7 +18,11 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: '*',
+    origin: [
+      'http://localhost:3000',
+      'https://user-authentication-mern-ts.vercel.app',
+    ],
+    methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'],
     credentials: true,
   })
 );
