@@ -20,10 +20,9 @@ app.use(
   cors({
     origin: [
       'http://localhost:3000',
-      'https://user-authentication-mern-ts.vercel.app/',
-      'https://user-authentication-mern-ts.vercel.app/login',
-      'https://user-authentication-mern-ts.vercel.app/register',
-      'https://user-authentication-mern-ts.vercel.app/logout',
+      'https://user-authentication-mern-ts.vercel.app',
+      'https://authentication-fzuznu62o-anguyen8613.vercel.app',
+      'https://authentication-git-master-anguyen8613.vercel.app',
     ],
     methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'],
     credentials: true,
