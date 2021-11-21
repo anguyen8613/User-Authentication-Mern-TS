@@ -18,6 +18,7 @@ const AuthContextProvider: FC<Props> = ({ children }) => {
 
   useEffect(() => {
     getLoggedIn();
+    //eslint-disable-next-line
   }, []);
 
   const getLoggedIn: () => Promise<void> = async () => {
