@@ -20,7 +20,7 @@ app.use(
   cors({
     origin: [
       'http://localhost:3000',
-      'https://user-authentication-mern-ts.vercel.app',
+      'https://user-authentication-mern-ts.vercel.app/',
       'https://user-authentication-mern-ts.vercel.app/login',
       'https://user-authentication-mern-ts.vercel.app/register',
       'https://user-authentication-mern-ts.vercel.app/logout',
