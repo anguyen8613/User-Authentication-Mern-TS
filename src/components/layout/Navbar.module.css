@@ -1,0 +1,7 @@
+.navContainer {
+  @apply flex flex-row justify-end m-2 text-gray-800;
+}
+
+a {
+  @apply p-2 hover:text-gray-400;
+}
