@@ -14,13 +14,14 @@ const AuthContext = createContext<IAuthContext | undefined>(undefined);
 
 const AuthContextProvider: FC<Props> = ({ children }) => {
   const [loggedIn, setLoggedIn] = useState(undefined);
+  const server: string = process.env.REACT_APP_HOST || 'http://localhost:5000';
 
   useEffect(() => {
     getLoggedIn();
   }, []);
 
   const getLoggedIn: () => Promise<void> = async () => {
-    const response = await axios.get('http://localhost:5000/user/isLoggedIn');
+    const response = await axios.get(`${server}/user/isLoggedIn`);
     const data = response.data;
     setLoggedIn(data);
   };
