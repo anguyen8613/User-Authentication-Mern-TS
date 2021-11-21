@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { FC, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { host } from '../../commons/host';
 import AuthContext from '../../context/AuthContext';
 
 const Logout: FC = () => {
