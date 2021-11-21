@@ -1,8 +1,10 @@
+import { host } from '../commons/host';
 import { User } from '../interfaces/user';
 
 export const loginUser = async (user: User) => {
+  const server: string = host;
   try {
-    const response = await fetch(`http://localhost:5000/user/login`, {
+    const response = await fetch(`${server}/user/login`, {
       method: 'POST',
       credentials: 'include',
       headers: {

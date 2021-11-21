@@ -1,8 +1,10 @@
+import { host } from '../commons/host';
 import { User } from '../interfaces/user';
 
 export const registerUser = async (user: User) => {
+  const server: string = host;
   try {
-    const response = await fetch(`http://localhost:5000/user/register`, {
+    const response = await fetch(`${server}/user/register`, {
       method: 'POST',
       credentials: 'include',
       headers: {
